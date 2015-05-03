@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <!--<script src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBtEPA6N9OJ8lZk45jX4539E3Hb783mpQM'></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src='http://api4.mapy.cz/loader.js'></script>
+    <script type="text/javascript">
+      Loader.load();
+    </script>
+    <script src="js/smap-latlon-picker.js"></script>
+    <style>
+      .sllpMap {
+        height: 360px;
+        width: 680px;
+      }
+      img{
+        max-width:none !important;
+      }
+    </style>
+    <title>Smap latlon picker by Rohlajz</title>
+  </head>
+  <body>
+    <fieldset class='sllpLatlonPicker'>
+      <input type='text' class='sllpSearchField'>
+      <input type='button' class='sllpSearchButton' value='search'>
+      <br/>
+      <div class='sllpMap'></div>
+
+      lat/lon: <input type='text' class='sllpLatitude' value='50.08'/> / <input type='text' class='sllpLongitude' value='14.52'/>, zoom: <input type='text' class='sllpZoom' value='10'/> <input type='button' class='sllpUpdateButton' value='update map'>
+      <select class="sllpColor">
+        <option value="blue">Modrá</option>
+        <option value="red" selected>Červená</option>
+        <option value="green">Zelená</option>
+        <option value="yellow">Žlutá</option>
+        <option value="purple">Fialová</option>
+      </select>
+    </fieldset>
+  </body>
+</html>

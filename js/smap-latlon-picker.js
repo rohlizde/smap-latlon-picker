@@ -145,6 +145,13 @@
         //set mouse controls to prevent default dblclick
         var mouse = new SMap.Control.Mouse(SMap.MOUSE_PAN | SMap.MOUSE_WHEEL); /* Ovládání myší */
         _self.vars.map.addControl(mouse);
+        
+        //set zoom and compass
+        var o = {title: "Posun mapy"};
+        var c = new SMap.Control.Compass(o);
+        _self.vars.map.addControl(c, {right: "8px", top: "50px"});
+        _self.vars.map.addControl(new SMap.Control.Zoom({title: "Zoom"}, {showZoomMenu: false}), {right: "8px", top: "9px"});
+
 
         //marker layer
         _self.vars.markerLayer = new SMap.Layer.Marker();
